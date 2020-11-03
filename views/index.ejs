@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container login">
+
+    <div class="form-control">
+      <div class="head">
+        <h1>Rental Riders</h1>
+      </div>
+
+      <form onSubmit=handleSubmit(event) enctype="multipart/form-data">
+
+        <label for="name">Name :</label>
+        <div class="form-group">
+          <div><i class="fa fa-user"></i></div><span></span>
+          <input type="text" name="name" id="name" placeholder="Enter name" />
+          <br />
+        </div>
+        <small class="message nameError"></small>
+        <br />
+        <br />
+
+        <label for="bike">Bike :</label>
+        <div class="form-group">
+          <div><i class="fa fa-motorcycle"></i></div><span></span>
+          <input type="text" name="bike" id="bike" placeholder="Enter bike name" />
+        </div>
+        <small class="message bikeError"></small><br />
+        <br />
+
+        <label>Gender :</label>
+        <div class="form-group gender">
+
+          <div class="genderMale">
+            <input value="male" type="radio" id="male" name="gender" value="Male" />
+            <label class="male" for="male">
+              <div><i class="fa fa-male"></i></div>
+            </label>
+          </div>
+          <span></span>
+          <div class="genderFemale">
+            <input value="female" type="radio" id="female" name="gender" value="Female" />
+            <label class="female" for="female">
+              <div><i class="fa fa-female"></i></div>
+            </label>
+          </div>
+        </div>
+        <small class="message genderError"></small>
+        <br /><br />
+
+        <label for="images">Images :</label>
+        <div class="form-group">
+          <div><i class="fa fa-picture-o"></i></div><span></span>
+          <input type="file" name="images" id="images" placeholder="Enter bike name" multiple />
+        </div>
+        <small class="message imgError"></small><br /><br />
+        
+        <button>UPLOAD</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>
